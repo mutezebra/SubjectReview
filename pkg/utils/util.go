@@ -2,13 +2,14 @@ package utils
 
 import (
 	"context"
-	"github.com/mutezebra/subject-review/biz/model/subject"
 	"math/rand"
 	"os"
 	"os/signal"
 	"strings"
 	"sync"
 	"time"
+
+	"github.com/mutezebra/subject-review/biz/model/subject"
 )
 
 var sb = strings.Builder{}
@@ -26,8 +27,10 @@ func Ptr[T any](v T) *T {
 	return &v
 }
 
-var once sync.Once
-var ctx context.Context
+var (
+	once sync.Once
+	ctx  context.Context
+)
 
 func NewContextCancelWhenExit() context.Context {
 	once.Do(func() {
@@ -35,10 +38,8 @@ func NewContextCancelWhenExit() context.Context {
 		ctx, stop = signal.NotifyContext(context.Background(), os.Interrupt, os.Kill)
 		go func() {
 			defer stop()
-			select {
-			case <-ctx.Done():
-				stop()
-			}
+			<-ctx.Done()
+			stop()
 		}()
 	})
 	return ctx

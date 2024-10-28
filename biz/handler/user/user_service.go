@@ -4,12 +4,13 @@ package user
 
 import (
 	"context"
+	"io"
+
 	"github.com/mutezebra/subject-review/app/user/usecase"
 	"github.com/mutezebra/subject-review/pkg/constants"
 	"github.com/mutezebra/subject-review/pkg/errno"
 	"github.com/mutezebra/subject-review/pkg/pack"
 	"github.com/mutezebra/subject-review/pkg/utils"
-	"io"
 
 	"github.com/cloudwego/hertz/pkg/app"
 	"github.com/cloudwego/hertz/pkg/protocol/consts"

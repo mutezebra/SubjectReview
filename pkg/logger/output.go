@@ -52,6 +52,7 @@ func SDebug(args ...interface{}) {
 func SErrorf(template string, args ...interface{}) {
 	loggerObj.WithOptions(skip).Errorf(template, args)
 }
+
 func SError(args ...interface{}) {
 	loggerObj.WithOptions(skip).Error(args)
 }

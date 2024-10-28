@@ -3,13 +3,15 @@ package service
 import (
 	"bytes"
 	"context"
+	"html/template"
+	"time"
+
+	"github.com/pkg/errors"
+
 	"github.com/mutezebra/subject-review/biz/model/subject"
 	"github.com/mutezebra/subject-review/pkg/constants"
 	"github.com/mutezebra/subject-review/pkg/logger"
 	"github.com/mutezebra/subject-review/pkg/utils"
-	"github.com/pkg/errors"
-	"html/template"
-	"time"
 )
 
 type sendEmail struct {

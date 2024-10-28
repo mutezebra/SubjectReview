@@ -4,6 +4,7 @@ package main
 
 import (
 	"github.com/cloudwego/hertz/pkg/app/server"
+
 	"github.com/mutezebra/subject-review/pkg/middleware"
 
 	"github.com/mutezebra/subject-review/config"

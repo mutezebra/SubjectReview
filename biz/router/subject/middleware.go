@@ -4,6 +4,7 @@ package subject
 
 import (
 	"github.com/cloudwego/hertz/pkg/app"
+
 	"github.com/mutezebra/subject-review/pkg/middleware"
 )
 

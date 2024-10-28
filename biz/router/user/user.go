@@ -4,6 +4,7 @@ package user
 
 import (
 	"github.com/cloudwego/hertz/pkg/app/server"
+
 	user "github.com/mutezebra/subject-review/biz/handler/user"
 )
 

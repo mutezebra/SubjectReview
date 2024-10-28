@@ -29,7 +29,7 @@ func buildSb() *subject.Subject {
 		ID:          utils.Ptr(id),
 		Name:        utils.Ptr(name),
 		Answer:      utils.Ptr(answer),
-		SubjectType: utils.Ptr(sbTYpe),
+		SubjectType: utils.Ptr(sbType),
 		CreatorID:   utils.Ptr(uid),
 		CreatedAt:   utils.Ptr(now),
 	}
@@ -39,7 +39,7 @@ var (
 	id     = int64(123)
 	name   = "Go语言从入门到放弃"
 	answer = "没有放弃可言"
-	sbTYpe = int16(constants.STGo)
+	sbType = int16(constants.Go语言)
 	uid    = int64(1)
 	now    = time.Now().Unix()
 )
@@ -67,7 +67,7 @@ func TestCreateSubject(t *testing.T) {
 	})
 
 	Convey("Test Get Subjects", t, func() {
-		results, err := db.GetSubjects(ctx, sbTYpe, 1, 10)
+		results, err := db.GetSubjects(ctx, sbType, 1, 10)
 		So(err, ShouldBeNil)
 		So(len(results), ShouldEqual, 1)
 		s := results[0]
@@ -85,12 +85,12 @@ func TestSubjectDBAddSubject(t *testing.T) {
 	ctx := context.Background()
 
 	Convey("Test add forget subject", t, func() {
-		err := db.AddForgetSubject(ctx, uid, id, sbTYpe)
+		err := db.AddForgetSubject(ctx, uid, id, sbType)
 		So(err, ShouldBeNil)
 	})
 
 	Convey("Test add forget subject", t, func() {
-		err := db.AddSuccessSubject(ctx, uid, id, sbTYpe)
+		err := db.AddSuccessSubject(ctx, uid, id, sbType)
 		So(err, ShouldBeNil)
 	})
 }
@@ -103,7 +103,7 @@ func TestReviewRecords(t *testing.T) {
 	ctx := context.Background()
 
 	Convey("Test review records", t, func() {
-		records, err := db.GetReviewRecords(ctx, uid, 1, 10)
+		records, _, err := db.GetReviewRecords(ctx, uid, 1, 10)
 		So(err, ShouldBeNil)
 		So(len(records), ShouldEqual, 1)
 		s := records[0]

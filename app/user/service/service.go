@@ -4,10 +4,11 @@ import (
 	"bytes"
 	"context"
 	"fmt"
-	"github.com/mutezebra/subject-review/pkg/constants"
-	"github.com/mutezebra/subject-review/pkg/logger"
 	"html/template"
 	"path"
+
+	"github.com/mutezebra/subject-review/pkg/constants"
+	"github.com/mutezebra/subject-review/pkg/logger"
 
 	"github.com/pkg/errors"
 	"golang.org/x/crypto/bcrypt"

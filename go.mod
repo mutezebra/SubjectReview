@@ -5,7 +5,6 @@ go 1.23.2
 require (
 	github.com/aliyun/alibabacloud-oss-go-sdk-v2 v1.1.1
 	github.com/apache/thrift v0.21.0
-	github.com/bytedance/mockey v1.2.12
 	github.com/cloudwego/hertz v0.9.3
 	github.com/golang-jwt/jwt v3.2.2+incompatible
 	github.com/pkg/errors v0.9.1
@@ -64,7 +63,6 @@ require (
 	github.com/hashicorp/serf v0.10.1 // indirect
 	github.com/henrylee2cn/ameda v1.4.10 // indirect
 	github.com/henrylee2cn/goutil v0.0.0-20210127050712-89660552f6f8 // indirect
-	github.com/hertz-contrib/cors v0.1.0 // indirect
 	github.com/jinzhu/inflection v1.0.0 // indirect
 	github.com/jinzhu/now v1.1.5 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect

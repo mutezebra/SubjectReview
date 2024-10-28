@@ -1,8 +1,9 @@
 package email
 
 import (
-	"github.com/mutezebra/subject-review/pkg/utils"
 	"testing"
+
+	"github.com/mutezebra/subject-review/pkg/utils"
 
 	"github.com/mutezebra/subject-review/config"
 )
