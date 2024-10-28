@@ -1,0 +1,32 @@
+mysql:
+  username: "root"
+  password: "123456"
+  address: "127.0.0.1:3306"
+  database: "subject_review"
+  charset: "utf8mb4"
+
+redis:
+  host: "127.0.0.1"
+  port: "6379"
+  database: 0
+  network: "tcp"
+  password: "password111"
+
+email:
+  port: 25
+  host:
+  user_name:
+  secret:
+
+oss:
+  default_avatar_path:
+  avatar_prefix:
+  download_dir:
+  oss_access_key_id:
+  oss_access_key_secret:
+  region:
+  bucket:
+
+secret:
+  jwt_secret:
+  issuer:
